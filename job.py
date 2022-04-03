@@ -11,16 +11,15 @@ nav = st.sidebar.selectbox(
 if nav == "HOME":
     st.image("inno.jpg")
     st.markdown(
-        """ <h2 align="Center"><font face="Papyrus" color="#000080"><b>CARRIER  RECOMMENDATION SYSTEM</b></font></h2>""",
+        """ <h1 align="Center"><font face="Garamond" color="#4863A0"><b>CARRIER  RECOMMENDATION SYSTEM</b></font></h1>""",
         True)
 #@@@@@@@@ SETTING JOB PAGE
 if nav == "JOB":
     st.image("image.jpg", width=100)
     st.markdown(
-        """ <h3 align="Left"><font face="Papyrus" color="#FF0000">Job Recommendation System<b></b></font></h3>""",
+        """ <h2 align="Left"><font face="Times New Roman" color="#4863A0">Job Recommendation System<b></b></font></h2>""",
         True)
-    st.markdown(""" <h5 align="Left"><font face="Papyrus" color="#FF0000">Please select UG programme and Specialization properly.<b></b></font></h5>""", True)
-
+    
     def recommend(job_name):
         job_index = job1[job1['INPUT'] == job_name].index[0]
         distances = similarity[job_index]
@@ -111,7 +110,7 @@ if nav == "JOB":
 if nav == "HIGHER STUDIES":
     st.image("image.jpg",width=100)
     st.markdown(
-        """ <h3 align="Center"><font face="Papyrus" color="#800000"><font size = "6"><b>Higher Studies Recommendation System</b></font></h3>""",
+        """ <h2 align="Left"><font face="Times New Roman" color="#4863A0"><font size = "6"><b>Higher Studies Recommendation System</b></font></h2>""",
         True)
     def recommend(higher_studies):
         pg_index = pg[pg['INPUT'] == higher_studies].index[0]
