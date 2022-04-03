@@ -103,9 +103,9 @@ if nav == "JOB":
         recommendation.extend(recommend_ug(selected_ug))
         recommendation.extend(recommend_spe(selected_Specialization))
         result = pd.DataFrame(unique_everseen(duplicates(recommendation)))
-        recommendations = result[0]
+        result = result.rename(columns={0:"Recommended Jobs for you"})
 
-        st.write(recommendations[1:16])
+        st.write(result[1:16])
 #@@@@@@@@ SETTING HIGHER STUDIES PAGE
 if nav == "HIGHER STUDIES":
     st.image("image.jpg",width=100)
@@ -173,4 +173,5 @@ if nav == "HIGHER STUDIES":
         recommendation1.extend(recommend_Spec(key_spec))
 
         result1 = pd.DataFrame(unique_everseen(duplicates(recommendation1)))
+        result1 = result1.rename(columns={0:"PG streams Recommended for you"})
         st.write(result1)
